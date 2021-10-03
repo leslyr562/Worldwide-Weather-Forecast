@@ -2,3 +2,12 @@ h1 {
     text-align: center;
     color:white;
 }
+
+form label {
+
+    font-size: large;
+}
+
+#grad {
+    background-image: linear-gradient(lightblue, blue, navy)
+}

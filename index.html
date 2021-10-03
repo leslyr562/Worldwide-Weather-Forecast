@@ -1,36 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel= "stylesheet" href="./assets/style.css" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <title>Worldwide Weather Forecast</title>
 </head>
+
 <body>
-    <header>
-        <div class="col-md-12">
-        <h1>Weather Dashboard</h1>
+    <header id="grad">
+        <div>
+            <h1>Weather Dashboard</h1>
         </div>
     </header>
 
-
-    <div class="container">
-        <div class="row">
-
-            <button class="btn">Search</button>
-            
+    <div class="wrapper">
+        <div class="one">
+            <form>
+                <label for="search"><strong>Search for a city:</strong>
+                </label><br>
+                <input type="text" id="cities" name="csearch">
+                <br>
+                <br>
+                <button type="button" class="btn btn-primary">Search</button>
+            </form>
         </div>
     </div>
 
-    <div class="container">
-        <div class="">
 
+    <div class="two">
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">city</h5>
+                </div>
+            </div>
+
+            <h5>5 Day Forecast:</h5>
+            <!-- cards -->
+            <div class="card-group">
+
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">card1</h5>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">card2</h5>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">card3</h5>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">card4</h5>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">card5</h5>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 
-<script src="./assets/script.js"></script>
-    
+    </div>
+
+
+    <script src="./assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
