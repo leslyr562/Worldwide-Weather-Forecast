@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+}
+
+
 h1 {
     text-align: center;
     color:white;
@@ -10,4 +15,21 @@ form label {
 
 #grad {
     background-image: linear-gradient(lightblue, blue, navy)
+}
+
+
+section {
+        display: -webkit-flex;
+        display: flex;
+}
+
+article {
+    -webkit-flex:3;
+    -ms-flex: 3;
+    flex: 3;
+    padding: 10px;
+}
+
+.card-group {
+    height: fit-content;
 }
