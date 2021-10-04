@@ -1,12 +1,3 @@
-// fetch ("https://api.openweathermap.org/data/2.5/forecast?q=austin&appid=0b511ddd7a9e1f781148f73c4e808cf6")
-// .then(response => response.json())
-// .then(data => console.log(data))
-
-//temp= .list.[0].main[5]
-//wind=.list.wind.speed
-//humidity=.list[0].main.[3]
-//uv index=
-
 function myFunction() {
     var searchCity = document.getElementById('searchCity').value;
 
@@ -17,14 +8,17 @@ function myFunction() {
             return response.json()
         })
         .then(data => {
-            console.log(data.list)
+            console.log(data)
             var cityDisplay = document.querySelector('#cityName')
-            cityDisplay.textContent = searchCity;
+            var getDates = moment().format("(MM/D/YYYY)")
+            cityDisplay.textContent = searchCity + ' ' + getDates ;
+
+            
 
             var todayWeather = data.list[0]
 
-
             var currentWeather = document.getElementById('details')
+
             var listEl = document.createElement('li')
             listEl.textContent = "Temp: " + todayWeather.main.temp
             currentWeather.appendChild(listEl)
@@ -36,6 +30,10 @@ function myFunction() {
             var listEl3 = document.createElement('li')
             listEl3.textContent = "Humidity: " + todayWeather.main.humidity + " %"
             currentWeather.appendChild(listEl3);
+
+        
+            
+
 
             //card group//
             ///one///
@@ -116,10 +114,14 @@ function myFunction() {
             card5.appendChild(dayEl3);
 
 
+    
             
-            localStorage.setItem("city", searchCity);
 
 
+            
+                localStorage.setItem(city, searchCity);
+                var city = localStorage.getItem("city")
+            
 
 
 
