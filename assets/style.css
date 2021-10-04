@@ -17,19 +17,13 @@ form label {
     background-image: linear-gradient(lightblue, blue, navy)
 }
 
-
-section {
-        display: -webkit-flex;
-        display: flex;
-}
-
-article {
-    -webkit-flex:3;
-    -ms-flex: 3;
-    flex: 3;
-    padding: 10px;
-}
-
-.card-group {
+.card-body {
     height: fit-content;
+    background-color: navy;
+    border-style: solid;
+}
+
+#card-body {
+    background-color: white;
+    border-style: solid;
 }
