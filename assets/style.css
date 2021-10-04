@@ -14,16 +14,20 @@ form label {
 }
 
 #grad {
-    background-image: linear-gradient(lightblue, blue, navy)
+    background-image: linear-gradient(to right, lightblue, blue, navy)
 }
 
 .card-body {
     height: fit-content;
-    background-color: navy;
+    background-color: #6170b8fa;
+    color: white;
     border-style: solid;
+    border-color: #303841;
 }
 
 #card-body {
     background-color: white;
     border-style: solid;
+    border-color:#303841;
+    color:black;
 }
