@@ -116,6 +116,13 @@ function myFunction() {
             card5.appendChild(dayEl3);
 
 
+            
+            localStorage.setItem("city", searchCity);
+
+
+
+
+
         })
 
 
