@@ -102,8 +102,8 @@ function myFunction() {
             var day5 = data.list[39]
             var card5 = document.getElementById('detail5')
             var dayEl = document.createElement('li')
-            dayEl.textContent = "Temp: " + day4.main.temp
-            card5.appendChild(dateEl)
+            dayEl.textContent = "Temp: " + day5.main.temp
+            card5.appendChild(dayEl)
 
             var dayEl2 = document.createElement('li')
             dayEl2.textContent = "Wind " + day5.wind.speed + " MPH";
