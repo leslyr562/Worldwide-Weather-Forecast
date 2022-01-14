@@ -1,14 +1,17 @@
+var city = JSON.parse(localStorage.getItem("city")) || [];
+
+
 function myFunction() {
     var searchCity = document.getElementById('searchCity').value;
 
 
     fetch('https://api.openweathermap.org/data/2.5/forecast?q=' +
-        searchCity + "&appid=0b511ddd7a9e1f781148f73c4e808cf6")
+        searchCity + "&appid=0b511ddd7a9e1f781148f73c4e808cf6&units=imperial")
         .then(response => {
             return response.json()
         })
         .then(data => {
-            console.log(data)
+            console.log('data', data)
             var cityDisplay = document.querySelector('#cityName')
             var getDates = moment().format("(MM/D/YYYY)")
             cityDisplay.textContent = searchCity + ' ' + getDates ;
@@ -17,7 +20,8 @@ function myFunction() {
 
             var todayWeather = data.list[0]
 
-            var currentWeather = document.getElementById('details')
+            var currentWeather = document.getElementById('details');
+            currentWeather.innerHTML = "";
 
             var listEl = document.createElement('li')
             listEl.textContent = "Temp: " + todayWeather.main.temp
@@ -38,6 +42,7 @@ function myFunction() {
             //card group//
             ///one///
             var card1 = document.getElementById('detail1')
+            card1.innerHTML = "";
             var listEl = document.createElement('li')
             listEl.textContent = "Temp: " + todayWeather.main.temp
             card1.appendChild(listEl)
@@ -53,6 +58,7 @@ function myFunction() {
             //two//
             var day2 = data.list[7]
             var card2 = document.getElementById('detail2')
+            card2.innerHTML = "";
             var cardEl = document.createElement('li')
             cardEl.textContent = "Temp: " + day2.main.temp
             card2.appendChild(cardEl)
@@ -67,7 +73,8 @@ function myFunction() {
 
             //three//
             var day3 = data.list[15]
-            var card3 = document.getElementById('detail3')
+            var card3 = document.getElementById('detail3');
+            card3.innerHTML = "";
             var detailEl = document.createElement('li')
             detailEl.textContent = "Temp: " + day3.main.temp
             card3.appendChild(detailEl)
@@ -84,6 +91,7 @@ function myFunction() {
             //four//
             var day4 = data.list[24]
             var card4 = document.getElementById('detail4')
+            card4.innerHTML = "";
             var dateEl = document.createElement('li')
             dateEl.textContent = "Temp: " + day4.main.temp
             card4.appendChild(dateEl)
@@ -101,6 +109,7 @@ function myFunction() {
 
             var day5 = data.list[39]
             var card5 = document.getElementById('detail5')
+            card5.innerHTML = "";
             var dayEl = document.createElement('li')
             dayEl.textContent = "Temp: " + day5.main.temp
             card5.appendChild(dayEl)
@@ -116,11 +125,11 @@ function myFunction() {
 
     
             
-
-
-            
-                localStorage.setItem(city, searchCity);
-                var city = localStorage.getItem("city")
+               if( city.indexOf(searchCity) === -1) {
+                city.push(searchCity)
+                localStorage.setItem('city', JSON.stringify(city));
+               }
+               
             
 
 
