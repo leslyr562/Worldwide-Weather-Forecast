@@ -16,24 +16,34 @@ function myFunction() {
       console.log("data", data);
       var cityDisplay = document.querySelector("#cityName");
       var getDates = moment().format("(MM/D/YYYY)");
-      cityDisplay.textContent = searchCity + " " + getDates;
+      cityDisplay.textContent = data.name + " " + getDates;
 
-      var todayWeather = data.list[0];
 
       var currentWeather = document.getElementById("details");
       currentWeather.innerHTML = "";
 
       var listEl = document.createElement("li");
-      listEl.textContent = "Temp: " + todayWeather.main.temp + "°F";
+      listEl.textContent = "Temp: " + data.main.temp + "°F";
       currentWeather.appendChild(listEl);
 
       var listEl2 = document.createElement("li");
-      listEl2.textContent = "Wind " + todayWeather.wind.speed + " MPH";
+      listEl2.textContent = "Wind " + data.wind.speed + " MPH";
       currentWeather.appendChild(listEl2);
 
       var listEl3 = document.createElement("li");
-      listEl3.textContent = "Humidity: " + todayWeather.main.humidity + " %";
+      listEl3.textContent = "Humidity: " + data.main.humidity + " %";
       currentWeather.appendChild(listEl3);
+    });
+
+    fetch("https://api.openweathermap.org/data/2.5/onecall?q=" +
+    searchCity +
+    "&appid=0b511ddd7a9e1f781148f73c4e808cf6&units=imperial"
+    )
+    .then((response) => {
+        return response.json()
+    })
+    .then((data) => {
+
 
       //card group//
       ///one///
@@ -42,7 +52,7 @@ function myFunction() {
       card1.innerHTML = "";
       var listEl1 = document.createElement("li");
       listEl.textContent = moment().add(1, 'days').format("(MM/D/YYYY)");
-      card1.appendChild(listEl);
+      card1.appendChild(listEl1);
 
       var listEl = document.createElement("li");
       listEl.textContent = "Temp: " + day1.main.temp + "°F";
@@ -130,4 +140,4 @@ function myFunction() {
   // //list//
 
   // .list[0].main.humidity
-}
+};
