@@ -35,7 +35,7 @@ function myFunction() {
       currentWeather.appendChild(listEl3);
     });
 
-    fetch("https://api.openweathermap.org/data/2.5/onecall?q=" +
+    fetch("https://api.openweathermap.org/data/2.5/forecast?q=" +
     searchCity +
     "&appid=0b511ddd7a9e1f781148f73c4e808cf6&units=imperial"
     )
@@ -43,7 +43,7 @@ function myFunction() {
         return response.json()
     })
     .then((data) => {
-
+console.log('data2', data)
 
       //card group//
       ///one///
