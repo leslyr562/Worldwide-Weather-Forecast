@@ -2,32 +2,86 @@
     box-sizing: border-box;
 }
 
+#appName{
+    color: white;
+}
 
-h1 {
+#topCard{
+    padding-left: 70px;
+    padding-right: 70px;
+    display: none;
+}
+#beforeSearch{
     text-align: center;
-    color:white;
+    display: block;
 }
 
 form label {
-
     font-size: large;
 }
 
-#grad {
-    background-image: linear-gradient(to right, lightblue, blue, navy)
+body {
+    color: white;
+    background: #0f0c29;
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+}
+
+div#card-body.card-body{
+    padding-bottom: 100px;
 }
 
 .card-body {
     height: fit-content;
-    background-color: #6170b8fa;
     color: white;
-    border-style: solid;
-    border-color: #303841;
+    text-align: center;
 }
 
 #card-body {
-    background-color: white;
-    border-style: solid;
-    border-color:#303841;
     color:black;
+}
+
+.card{
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 0rem;
+    
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    float:left;
+  width: 50%;
+  color: white;
+}
+
+h1#temp {
+    color: white;
+}
+
+h6#todayDate{
+    color:white;
+}
+
+h2{
+    color: white;
+}
+
+form.search{
+    text-align: center;
+    padding-right: 0px;
+    padding-bottom: 30px;
+}
+button{
+    background-color: white;
+}
+
+h1 h2 h3 h4 h6 h7 h8 {
+    color: white;
+}
+p{
+    color: white;
 }

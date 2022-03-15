@@ -10,6 +10,7 @@
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Worldwide Weather Forecast</title>
 </head>
 
@@ -17,27 +18,34 @@
 
     <header id="grad">
         <div>
-            <h1>Weather Dashboard</h1>
+            <p>Weather App</p>
         </div>
     </header>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-3">
-                <form>
-                    <label for="search"><strong>Search for a city:</strong>
-                    </label><br>
-                    <input type="text" id="searchCity" value="">
-                    <br>
-                    <br>
-                    <button type="button" class="btn btn-primary btn-block" onclick="myFunction()">Search</button>
+    <div>
+        <div >
+            <div>
+                <form class='search'>
+                    <input type="text" id="searchCity" name='search' placeholder="Search for a city..." value="">
+                    <button type="button" onclick="myFunction()"><i class="fa fa-search"></i></button>
                 </form>
             </div>
 
-            <div class="col-md-9">
+            <!-- <div id='beforeSearch'>
+                <p>Our weather app lets you search any city in the world for whatever occasion or reason we are here.
+        <br />
+        Come on and try! 🌡
+                </p>
+            </div> -->
+
+            <div id="topCard" class='allContent'>
                 <div class="card">
                     <div class="card-body" id="card-body">
                         <h2 class="card-title" id="cityName"></h2>
+                        <h1 id='temp'></h1>
+                        <img src="" alt="" class=item id="icon"></img>
+                        <h2 id='des'></h2>
+                        <h6 id='todayDate'></h6>
                         <ul id="details">
                         </ul>
                     </div>
@@ -45,43 +53,53 @@
 
                     <h2>5 Day Forecast:</h2>
                     <!-- cards -->
-                    <div class="card-group">
+                    <div class=" card-deck">
 
 
                         <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title" id="card1"></h5>
-                                <ul id="detail1"></ul>
+                            <div class="card-body" id="card1">
+                                <h5 id="card-title1"></h5>
+                                <img src="" alt="" class=item id="icon1"></img>
+                                <h3 id='temp1'></h3>
+                                <h8 id="des1"></h8>
                             </div>
                         </div>
 
                         <div class="card">
                             <div class="card-body" id="card2">
-                                <h5 class="card-title"></h5>
-                                <ul id="detail2"></ul>
+                                <h5 id="card-title2"></h5>
+                                <img src="" alt="" class=item id="icon2"></img>
+                                <h3 id='temp2'></h3>
+                                <h8 id="des2"></h8>
                             </div>
                         </div>
 
 
-                        <div class="card">
+                        <div class="card ">
                             <div class="card-body" id="card3">
-                                <h5 class="card-title date"></h5>
-                                <ul id="detail3"></ul>
+                                <h5 id="card-title3"></h5>
+                                <img src="" alt="" class=item id="icon3"></img>
+                                <h3 id='temp3'></h3>
+                                <h8 id="des3"></h8>
                             </div>
                         </div>
 
                         <div class="card">
                             <div class="card-body" id="card4">
-                                <h5 class="card-title"></h5>
-                                <ul id="detail4"></ul>
+                                <h5 id="card-title4"></h5>
+                                <img src="" alt="" class=item id="icon4"></img>
+                                <h3 id='temp4'></h3>
+                                <h8 id="des4"></h8>
 
                             </div>
                         </div>
 
                         <div class="card">
                             <div class="card-body" id="card5">
-                                <h5 class="card-title"></h5>
-                                <ul id="detail5"></ul>
+                                <h5 id="card-title5"></h5>
+                                <img src="" alt="" class=item id="icon5"></img>
+                                <h3 id='temp5'></h3>
+                                <h8 id="des5"></h8>
                             </div>
                         </div>
 
