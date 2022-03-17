@@ -30,6 +30,5 @@ GithubPages: https://leslyr562.github.io/Worldwide-Weather-Forecast/
 
 Github Repository: https://github.com/leslyr562/Worldwide-Weather-Forecast
 
-##Authors
-
-- Lesly Gonzalez
+## Contribution
+Made with ❤ by Lesly 
